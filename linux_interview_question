@@ -113,3 +113,221 @@ So when you mention 765 numeric code to provide access permission, User will get
 
 
 #############################################################################################################################
+
+11.What is IRIX Mode in top command?
+
+CPU usage percentage is very common confusion in LINUX. Sometimes, User or new system administrator complaint that CPU is showing >100% which is some configuration issues or VM issues. But this is not true.
+
+Linux treats all processors individually and when you run top common, it should CPU usage per processor wise. Here, System is not considering all processors as a whole and showing usage of each processor individually which lead to total PU utilization to >100%.
+
+To resolve this confusion, IRIX mode has been introduced. This is the default mode of Linux now. In Irix Mode, System considers all processors as a whole and CPU usage can vary from 0 to 100 only. IRIX feature was introduced in Solaris and adopted by Linux later.
+
+
+12.What is the difference between the tar, gz, and zip?
+
+Tar & ZIP are two most commonly used utilities in Linux system
+
+TAR is archiver utility which will archive the selected files or directories. Extension of TAR is .tar.
+
+gz is known as gunzip used compress files only. Extension of gz is .gz. You can use gz on TAR to compression directories achieved by TAR.
+
+ZIP is archiver and compression utility for files and directory. Extension of ZIP is .zip.
+
+The benefit of TAR can be applied on directories. Sometimes, you do not want to compress the filer but want to bundle them, TAR is perfect for it. TAR with GZIP is the best combination. Like GZIP, we also have bzip2 which use a completely new algorithm to compress files has given less size in compare to gzip.
+
+
+13.List down some of major Linux distributions?
+
+LINUX is an open-source operating system which allows users to modify kernel as per their requirement. This facilitates the different part of Linux to be deployed, modified and tested by a different organization. This result in multiple flavors of Linux available in the market and each has its own feature.
+
+Major Linux distributions are as below:-
+
+Ubuntu: It’s the most common and well-known distribution. It has lots of ree installed apps for user’s easiness. It’s very easy to use and available in the command line and GUI both.
+
+Red Hat Enterprise: Red Hat Enterprise Linux or RHEL is commercial Linux distribution. It stale, tested, user-friendly and most important NOT free to use.
+
+Debian: Debian is one of the fastest and user-friendly Linux version.
+
+Linux Mint: Its a special type of distribution works on the windows system as well. This for beginners to get hands-on the Linux system.
+
+Fedora: Fedora is not in use on high numbers due to less stability. It supports a GNOME3 desktop environment by default.
+
+
+14.Briefly explain the process of sending an email?
+
+The basic steps of this process are mentioned below for your convenience.
+
+Step 1: After composing a message and send, your email client - whether it's Outlook Express or Gmail - connect to the domain's SMTP server. This server can name many things; a standard example would be smtp.local.com.
+Step 2: In this step, the email client communicates with the SMTP server by giving your email address, the recipient's email address, the message body, and any attachments.
+Step 3: Now SMTP server has complete details to processes the recipient's email address - especially its domain. If the domain name is the same as the sender's, the message is routed directly over to the domain's POP3 or IMAP server - no routing between servers needed. If the domain is different, though, the SMTP server will have to communicate with the other domain's server.
+Step 4: To deliver email and to find the recipient's server, the sender's SMTP server has to communicate with the DNS or Domain Name Server. The DNS will take the recipient's email domain name and translates this into an IP address. The sender's server cannot route an email properly with a domain name alone; an IP address is a unique number that is assigned to every computer that is connected to the Internet. By knowing information, an outgoing mail server can perform its work more efficiently.
+Step 5: Once SMTP server got the recipient's IP address, it can connect to its SMTP server. This isn't done directly, though; instead, the message is routed along with a series of unrelated SMTP servers until it arrives at its destination.
+Step 6: The recipient's SMTP server scans the incoming message. If the domain and user name are valid, it forwards the message along to the domain's POP3 or IMAP server. From there, it is placed in a send mail queue until the recipient's email client allows it to downloaded. At that point, the message can read by the recipient.
+
+
+
+15.Define Linux Kernal and can we modify it?
+
+The kernel is the lowest level of software that controls all hardware and communicates with users for functions needs to perform. Linux Kernel is the core of the operating system that provided a user interface to perform user commands and control associated hardware. Linux Kernel is a layer that provides the ability to the user to control system hardware, develop applications on the operating system. All underline hardware with the system is communicable though Kernel only. The kernel gives you the independence to use software and programming language by your choice, Kernel is capable enough to convert them in machine language to control the required hardware subsystem.
+
+Linux Kernal is free and open-source software and as per General Public License (GPL), it becomes legal for anyone to edit it.
+
+Open-source software authorized you to distribute software with the source. This privileged people to review and add features as per their requirements. This gives a win-win solution to the complete community.
+
+
+
+16. What is Network Teaming?
+
+Network Teaming also is known as Ethernet Channel Bonding that enables two or more Network Interfaces Card (NIC) to work as a single virtual NIC card. This means the machines will be supposed to work on the virtual one and which may increase the bandwidth and provides redundancy of NIC Cards. This helps us in achieving redundant links, load balancing or fault tolerance networks in the production system. If one physical NIC is down or can say unplugged, it will automatically move the resources to other NIC card. Channel/NIC bonding works with the help of the bonding driver in Kernel. 
+
+2 main types of Network Teaming:-
+
+Load balancing (Round-Robin): In Load balancing, Both network cards are active all the time and dividing the workload for better data transmission. This provides better resource utilization and faster output.
+Active-Backup: In Active-Backup: One network card is active at one time and another card will keep passive for backup. In case of active network card failure, Passive card will start behaving as active to fulfil the user request.
+
+
+17. What are the different types of Shells used in Linux?
+
+Shell is an interpreter which converts scripts or executables to machine action. Shell prompt is a Command-line interface as well as GUI (Graphical User Interface) that takes inputs from the user and executes selected program according to that. Shell Scripts can be combined in a package for automation and schedule background tasks. Shell Scripts will be saved using extension .sh and scheduled using corn jobs.
+
+Some majorly known shells as below:
+
+sh: sh is known as Bourne Shell (sh). This is the original UNIX shell which has limited functionality. Command path is located at /bin/sh and /sbin/sh.
+bash: Default shell in most Linux installations and compatible with the legacy sh shell. bash is the short name of Bourne Again Shell. Command path is /bin/bash.
+ksh: High-level programming language shell known as Korn Shell. Command path is /bin/ksh.
+Tcsh/csh: Tcsh or csh is also known as C Shell. This works on C language syntax. Command path is / bin/csh.
+
+
+
+18. What is the difference between the mail client and the mail server?
+
+Email client primarily is a desktop or mobile application that enables users to receive and send emails directly on the desktop or mobile. Typically, email client requires an email address to be set up, mail server details & connectivity to the mail server to configure and use email service. These configuration and settings include email address, password, POP3/IMAP and SMTP address, port number, email aliases, and other related preferences.
+
+A mail server or an email server is a server that supports email function in network and support clients to handles and delivers e-mail over a network. This can be over intranet or internet. Email server receives emails from client computers and delivers them to other mail servers after proper authentication and authorization. Mail servers use MTA (Mail transfer agent) with SMTP (Simple Mail Transfer Protocol) to support email transmission. You have used any open source free MTA or any paid version the basis of your requirements and security policies.
+
+
+
+
+19.Share 5 Linux commands you use on a regular basis in your environment?
+
+We use several commands in our day to day Linux activities and support. You can also use help or man page for a list of commands and the available options for quick reference. Most basic sand majorly uses are as below:
+
+cd: You can use this command to change your working directory. You can easily reach you your home directly by “CD /” from any working location.
+PWD: This command displays the full path of your current working directory. Very use full while reviewing different directories during troubleshooting or system analysis.
+ls: This command displays complete of files and directories in your current working directory. You can additional parameter -l for permission details and -a for hidden or config files. We have lots of option to use with ls commands to have the required output.
+Mkdir / rmdir: You can use “Mkdir” command to create a new directory and “rmdir”  This command to remove or delete the directory.
+Su: This is a special command to log in with a specific user or switches user from one to the other.
+
+
+
+20. Explain SMTP  server in Linux with any open-source Mail transfer agent?
+
+SMTP(Simple Mail Transfer Protocol) is a push protocol and is used to send the mail whereas POP (post office protocol) or IMAP (internet message access protocol) are used to retrieve those emails at the receivers or client-side. The SMTP server on Linux is very fast, reliable and secure. Also, it supports POP3, IMAP and webmail access. Linux systems in a network can use the SMTP server to send alerts notifications. The mail transfer agent is an application use SMTP to transmit Email over the network. We have some of the most popularly used open-source Mail transfer agents like POSTFIX, SENDMAIL, EXIM, QMAIL, MUTT, ALPINE etc.. Each agent has its own advantages and disadvantages. You can review your system and can install the required one as per need.
+
+Postfix is a free and open-source mail MTA (Mail Transfer Agent). This application used to send and receive the email. It is responsible for routing and delivering electronic mail. This is a cross-platform and most popular system.
+
+
+
+21. What are network zones?
+
+First, We need to understand the difference and relation between the network connection and a network interface. A network interface can have many connections but one connection is only bounded to a specific network interface. Network connections are unclassified by default. It’s a system or network administrator's responsibility to create a zone with specific details to enable a level of trust by creating firewall policies.
+
+Network Zone explains the trust level of a network connection. Creating Zones helps in identifying the secure network or unsecured network. Your system can have large access in a secure zone and limited to other zones or unsecured networks. This helps Network administrators to plan the level of monitoring for different networks.
+
+The initial network zones:
+
+trusted
+Fully trusted connections. All the incoming traffic is allowed.
+home work internal
+Partly trusted connections. User/administrator defines open services.
+DMZ
+Mostly untrusted connections, the demilitarized zone.
+Public external
+Mostly untrusted connections. User/administrator defines the open services.
+block
+Fully untrusted connections. No incoming traffic is allowed.
+drop
+Fully untrusted connections. All packets are dropped immediately.
+
+22.Explain Physical Volume, Logical volume & volume group?
+
+Physical volume or Physical disk is the first layer of the disk management. It’s considered as physical disks connected to the system. It can be local to the system or from SAN storage. Normally Datacenter and storage team manage it. Any disk addition and expansion can be done if space is available at this level.
+
+A volume group is the second layer or middle layer between physical volume and logical volume. Volume group club all physical volume and display them as single storage to the system for further partitioning and usage. Due to large system in today’s environment, Application or Database need bigger space than an available physical disk. Volume group allows to clod multiple physical disk as one volume. This leverage system team to use bigger disks with any splitting at their end.
+
+Logical volume or logical disk is the management of volume group to divide disk as per usage instead of allocation physical storage directly. Logical Volume Management (LVM) partitions can allocate across the physical drives and be resized like traditional disks.
+
+
+23. What’s swap space and its usage?
+
+Swap space is like pagefile in windows. Swap space is virtual memory where disk reserved for swap will behave like actual RAM.
+
+In Swap space, Some amount of physical disk to hold some transaction or data temporarily. Ideally, this data should be residing in RAM or memory but due to a situation where memory is under pressure, the system moves some transaction or data into swap space. RAM is always costlier than disk space and disk performance is increasing day by day. Physical Memory need proper management for cost-effectiveness and swap spaces help in using the disk as a physical memory or temporary and least used data. The system will consider this as a part of memory only. Swapping of memory to and from physical storage is managed by systems memory management. By default, this is an auto driven process and does not require any manual intervention.
+
+For more accurate memory management We also have the tools to manage swap space as per our requirements
+
+
+
+
+
+24. 
+What is Input/output Redirection?
+
+By default, the standard input device is Keyboard and the standard output device is a Display screen. But to automate the processes or to pass the output of one process to another process these standard ways does not work. Linux feature of directing input & outputs data to and from processes is called Input/Output Redirection. Input / Output redirection is a required feature for good programming and shell scripting. It’s used for taking input and showing results as per requirement. Input from user and passing to other process is called input redirection whereas if process further pass its output to another process or function that will be output redirection for that and input redirection for receiving one.
+
+In Linux, we have three redirections available as below: -
+
+Input Redirection: ‘<’ symbol is used for input redirection to the new process.
+Output Redirection: ‘>’ symbol is used for output redirection to a new process or log file.
+Error Redirection: It is denoted as STDERR(2). This is very useful for error handling.
+What is Input/output Redirection?
+
+
+
+25. What basics measures could you take to secure an ssh connection? For Linux users, it is frequent to access servers by ssh. But are we sure that the communication established is really good secured?
+
+Data & system security is one of the biggest challenges today. We need to secure our system from all possible vulnerabilities. The system should be on the basis of best practices either adopted from and best practices either from approved vendors or from inhouse from experts. SSSH has secured shell services used to connect a Linux system in a secured manner. SSH is is the most common tool for a system administrator for better system management and security. SSH gives some advance features that need proper knowledge and expertise to use. SSH gives more feature to the user.
+
+Some of the very simple steps to secure ssh services as below:-
+
+Disable/enable Root User
+Reset Root user password
+Disable password-based login and enable key-based logins
+Change standard ports of the system and assign random ports
+Restricted network access from the system
+Use a whitelist approach to allow only authorized IPs to connect
+
+
+
+
+
+26. What are system calls used for process management in Linux?
+
+Service Calls provide a feature to use operating system services. It provides an interface between the process and the operating system for better functionality and requirements. System calls are not for beginners, it needs some level of expertise to use. System call provides additional control over the system. Processes are the most basic unit on Linux System and process management need some system calls in Linux, some of them are:-
+
+System calls
+Explanation
+Fork
+Creates a new process
+Exec
+Execute the program
+Wait
+Force process to wait
+Exit
+Exit/terminate the process
+Clone
+Creates Child Process
+Exit_Group
+Exit/terminate all threads in the process
+Nice
+Change the priority of the running process
+Getppid
+Find parent ID of the process
+Vfork
+Create Child Process and block parent
+
+
+
+########################################################################################################
+END
+####################################################################################################
