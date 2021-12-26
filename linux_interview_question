@@ -1,0 +1,115 @@
+1. What does SELinux mean in Linux?
+
+SELinux is known as Security-enhanced Linux. In today’s world data is everything, Protecting your server and keep is up to server is a major challenge. Linux kernel gives security option of SELinux which is designed to protect the server from misconfigurations and unauthorized data access/modification. It helps in defining policy for accessing programs and files.
+
+SELinux comes with 3 modes Enforcing, Permissive and Disabled.
+
+Enforcing mode: Default mode to enforce the policies on the system, restrict access and log actions.
+Permissive mode: Here, SELinux was enabled but does not enforce security policies. This result warning and logging for any restricted access.
+Disabled mode: When SELinux is turned off and the security policies do not protect the server.
+
+
+2.
+What is Linux Loader?
+
+Linux Loader or Linux Boot Loader is also known as LILO, a combination of initial 2 characters of Linux LOader.
+
+LILO loads Linux operating system into main memory to boot system and to start working on it. Multiple operating systems like Windows & Mac OS comes up with their respective boot loaders.  When you install Linux OS, you need to install a special boot loader for it. We have multiple boot loaders available in the market, LILO is one of them.
+
+When the system started, BIOS performs some initial tests and transfers control to the Master Boot Record. Now, LILO loads the Linux OS and starts it. The best part of using LILO is that it allows fast boot of Linux OS.
+
+3.
+Explain /bin, /usr, /sbin, /user/bin and /user/sbin Linux directories?
+
+/bin: Its critical directory used to bring the system online in single-user mode to repair it. This contains executable programs(can say scripts) for this.
+
+/sbin: This directory holds commands needed to boot the system in normal condition but not executed or used by normal users.
+
+/usr: This is one of the largest directories in the Linux system, mostly mounted from a separate partition. Birnies and files all programs are installed reside here.
+
+/usr/bin: This directory contains programs, executables and scripts not used for boot process but used by users to execute. Most of the programs or executable executed by users rather than root
+
+/usr/sbin: Program binaries or executables required for a system administrator is kept under this directory. This program binaries or executables are not required for boot process or normal users.
+
+6.
+What is the ctrl+D error?
+
+ctrl+D error is one of the common errors occur when the root user tries to make any Permanent entry in fstab file & by mistake changes the path location of mounted file systems in os, it gives error while rebooting the system and fails to load.
+
+fstab is a system configuration file on the Linux operating system that contains information about major filesystems. This file is located in /etc directory and can be viewed like “cat /etc/fstab”.
+
+We have set steps to recovery system from ctrl+D error.
+
+Boot system using bootable CV/DVD of Linux of the current version installed
+Read ctrl+D error for the exact issue
+Connect using Root User and it will connect you in single-user mode
+Access /etc/fstab file and make required changes 
+Try normal system reboot
+
+
+7.
+What is the FTP Server?
+
+FTP is the simplest file transfer protocol to exchange files to and from a remote computer or network system. Similar to Windows, Linux, and UNIX operating systems they also have built-in command-line prompts that can be used as FTP clients to establish FTP connection. FTP works in Client-Server architecture to communicate and transfer the file during an established FTP session. 
+
+When the Client initiates a connection to the server, it’s called Passive Connection. Whereas when Server initiates a connection to the client, it’s called Active Connection.
+
+In Phase 1, When Connection initiated with the server, User credentials are passed for authentication. This is the control connection phase. In Phase 2, When actual data is transferred between client & server, This is data connection phase.
+
+
+8.
+Explain are different process states in Linux?
+
+When we execute “ps aux”  in Linux terminal console, we can see multiple states of processes running in the system under the STAT column.
+
+R: Process is running with CPU or waiting for CPU (Running or Runnable)
+
+S: Process is waiting for the set event to complete, Like an input from terminal (SLEEP)
+
+D: Process is with uninterruptible sleep stats which cannot be changed or killed \ rollback. The only way to go away is the reboot system.
+
+Z: Process in Zombie status means the process is already killed but process information and data still exist in the process table.
+
+T: Process either completed or terminated by the operating system or user. This is also known as Terminated /  Completed.
+
+
+9.
+Explain Root and it’s significance in the Linux system?
+
+The root is the most privileged account in Linux for the system administrator. The root user has you full access to the system to perform all kind of access. The root is default account of Linux, created with Linux installation only. The root user is also known as the Root account or superuser. Due to uncontrolled access of Root account, this account needs to be secured and used crucially and carefully.
+
+Some of the functions can be performed by the Root account:-
+
+The root can create/delete/ modify any user, user group, files, directory and permissions
+The root can connect by using any user without password
+System / Library / function calls
+Managing hidden & config files
+System administrator commands
+Etc.
+
+
+
+
+
+10.What is the numeric and alphabetical method for granting permissions?
+
+Granting permission on files and directories is one of the crucial and data security stuff for Linux System Administrator. Permission on any file or directory is a combination of 9 alphabets. First 3 from the left represents owner access, then middle 3 represents user group access and the last 3 are for other users who are not the owner or part of a group having access.
+
+rwxrwxr
+
+wx
+
+We have several ways to grant permissions using the numeric and alphabetical method. Having knowledge of these shortcuts makes administrators life easy.
+
+rwx = 111 in binary = 7
+
+rw- = 110 in binary = 6
+
+r-x = 101 in binary = 5
+
+r-- = 100 in binary = 4
+
+So when you mention 765 numeric code to provide access permission, User will get like:- rwxrw-r-x
+
+
+#############################################################################################################################
